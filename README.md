@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/react-remock.png?downloads=true&stars=true)](https://nodei.co/npm/react-remock/)
 
-JFYI: You can mock any React Component, rendered anywhere, and for the any reason.
+JFYI: You can mock any React Component, rendered anywhere, and for any reason.
 
 This is like proxyquire, or jest.mock. Not for node.js, but for React. Pure React Dependency Injection.
 >Every time you can NOT "story" something due to complexity. 
@@ -23,12 +23,12 @@ Every that time – mock the things you can NOT control.
 Remock is based on the same technique, as [React-Hot-Loader](https://github.com/gaearon/react-hot-loader) - intercepts React calls and do.. what ever you want.
 
 # Use cases
-This library was create for testing purposes only.
+This library was created for testing purposes only.
  - Using remock with __enzyme__ testing allows you to perform more _shallow_ mount testing.
- You can just mock out, complitely remove some (deep nested internal) Component which could make testing harder. For example - Redux Connect, always seeking proper Provider.
+ You can just mock out, completely remove some (deep nested internal) Component which could make testing harder. For example - Redux Connect, always seeking proper Provider.
  
- - Using remock with __storybooks__ testing allows you to hide some parts of "bigger", stories, leaving a holes in the story plot.
-   - In case you are using BEM notation - it is really super easy to cat a hole, as long dimensions are propertly of a block, not element.
+ - Using remock with __storybooks__ testing allows you to hide some parts of "bigger" stories, leaving holes in the story plot.
+   - In case you are using BEM notation - it is really super easy to cat a hole, as long dimensions are property of a block, not element.
    - Yet again, in case of redux - you can replace connect by another component, to make it easier to provide mocked data for the story.   
 
 # API
@@ -38,7 +38,7 @@ Play in codesandbox - https://codesandbox.io/s/xk7vp60o4
 Api is simple - it gets `React.createElement` as an input and returns `React.createElement` as an output.
 And it will be called when real `React.createElement` has been called.
 
-If you will not return anything - element willbe completely mocked. In other cases - you could specify what to return.
+If you will not return anything - element will be completely mocked. In other cases - you could specify what to return.
 ```js
  import {remock} from 'react-remock';
 
